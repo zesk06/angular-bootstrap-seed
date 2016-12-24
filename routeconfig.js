@@ -7,6 +7,17 @@ myApp.config(function($stateProvider, $urlRouterProvider) {
     { name: 'about', url: '/about', component: 'about'},
 
     {
+      name: 'carousel',
+      url: '/carousel',
+      component: 'carousel',
+      resolve: {
+        images: function(CarouselService) {
+          return CarouselService.getAllImages();
+        }
+      }
+    },
+
+    {
       name: 'people',
       url: '/people',
       component: 'people',

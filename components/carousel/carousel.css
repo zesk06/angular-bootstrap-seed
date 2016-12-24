@@ -1,0 +1,7 @@
+.carousel-inner > .item > img{
+       /* limit carousel image size to avoid resize */
+       max-height:500px;
+       /* center images */
+       margin: 0 auto;
+     }
+
