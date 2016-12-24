@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>Wonderfull</title>
+  <meta name="description" content="An angular-bootstrap site" />
+  <!-- angular JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.10/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.0-beta.3/angular-ui-router.min.js"></script>
+
+
+  <!--  Our App Code -->
+
+  <script src="routeconfig.js"></script>
+
+  <script src="components/people/people.service.js"></script>
+  <script src="components/hello/hello.js"></script>
+  <script src="components/about/about.js"></script>
+  <script src="components/people/people.js"></script>
+  <script src="components/person/person.js"></script>
+
+
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body ng-app="hello">
+  <div class="nav">
+    <a ui-sref="hello" ui-sref-active="active">Hello</a>
+    <a ui-sref="about" ui-sref-active="active">About</a>
+    <a ui-sref="people" ui-sref-active="active">People</a>
+  </div>
+
+
+  <ui-view></ui-view>
+
+  <!-- bootstrap JQuery -->
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+
+</html>
