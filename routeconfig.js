@@ -1,6 +1,6 @@
 var myApp = angular.module('hello', ['ui.router']);
 
-myApp.config(function($stateProvider) {
+myApp.config(function($stateProvider, $urlRouterProvider) {
   // An array of state definitions
   var states = [
     { name: 'hello', url: '/hello', component: 'hello'},
@@ -36,5 +36,8 @@ myApp.config(function($stateProvider) {
   states.forEach(function(state) {
     $stateProvider.state(state);
   });
+
+  // route to /hello by default
+  $urlRouterProvider.otherwise('/hello')
 });
 
